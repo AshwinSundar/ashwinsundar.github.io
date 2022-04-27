@@ -129,8 +129,7 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <h1>Personal Site for Ashwin Sundar</h1>
-      <h2>Under Construction</h2>
+      <h1>Under Construction</h1>
       <title>Ashwin Sundar</title>
       {/* <title>Home Page</title>
       <h1 style={headingStyles}>

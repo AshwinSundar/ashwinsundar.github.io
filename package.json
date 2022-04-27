@@ -1,12 +1,11 @@
 {
-  "name": "ashwin-sundar",
+  "name": "personal-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Personal site for Ashwin Sundar",
+  "description": "personal-site",
   "author": "Ashwin Sundar",
   "keywords": [
-    "Ashwin",
-    "Sundar"
+    "gatsby"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -15,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "echo 'ashwinsundar.com' > public/CNAME; read -p 'Enter commit message: ' message; gatsby build && gh-pages -d public -b main -m $message"
+    "deploy": "gatsby build && gh-pages -d public -b main -m 'New release'"
   },
   "dependencies": {
     "gatsby": "^4.12.1",
@@ -28,11 +27,7 @@
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.44",
     "@types/react-dom": "^17.0.15",
-    "autoprefixer": "^10.4.5",
-    "gatsby-plugin-postcss": "^5.12.1",
     "gh-pages": "^3.2.3",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24",
     "typescript": "^4.6.3"
   }
 }

@@ -10,6 +10,3 @@
 **Other Notes**
 
 - Create a file called `CNAME` containing your custom domain, and include it in the `public` folder so gh-pages grabs it on deployment.
-- if accessing via ssh, make sure you run `gh config set git_protocol https -h github.com`
-- if gh asks you for a password, switch to https using `gh config set git_protocol https -h github.com`
-- watch build with `gh run watch`
