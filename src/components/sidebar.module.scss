@@ -1,0 +1,51 @@
+$total-images: 10;
+$time-per-image: 10;
+$total-time: $total-images * $time-per-image;
+$transition-speed: 1;
+$percent-transition-in: $total-time * $transition-speed / 100;
+$percent-transition-out: $percent-transition-in + 10;
+$image-width: 200px;
+$image-height: 200px;
+
+.profile-images {
+  position: relative;
+
+  height: $image-height;
+  width: $image-width;
+
+  .image-container {
+    position: absolute;
+
+    .image {
+      animation-name: appear;
+      opacity: 0;
+      width: $image-width;
+      height: $image-height;
+    }
+  }
+}
+
+@for $i from 0 through $total-images {
+  .image#{$i} {
+    animation-duration: #{$total-time}s;
+    animation-delay: calc(1s * $i * $time-per-image);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  #{$percent-transition-in}% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  #{$percent-transition-out}% {
+    opacity: 0;
+  }
+}

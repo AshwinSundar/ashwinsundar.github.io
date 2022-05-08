@@ -1,27 +1,41 @@
 {
-  "name": "personal-site",
+  "name": "ashwin-sundar",
   "version": "1.0.0",
   "private": true,
-  "description": "personal-site",
+  "description": "Personal Site for Ashwin Sundar",
   "author": "Ashwin Sundar",
   "keywords": [
-    "gatsby"
+    "Ashwin",
+    "Sundar"
   ],
   "scripts": {
+    "dev": "gatsby develop",
     "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "cleandev": "gatsby clean; gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "gatsby build && gh-pages -d public -b main -m 'New release'"
+    "deploy": "echo 'ashwinsundar.com' > public/CNAME; read -p 'Enter commit message: ' message; gatsby build && gh-pages -d public -b main -m $message",
+    "autodeploy": "echo 'ashwinsundar.com' > public/CNAME; gatsby build && gh-pages -d public -b main -m 'autodeploy'",
+    "find-port-pid": "lsof -iTCP:8000 -sTCP:LISTEN",
+    "type-scss": "npx tsm src"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "gatsby": "^4.12.1",
-    "gatsby-plugin-sass": "^5.12.1",
+    "gatsby-plugin-image": "^2.13.0",
+    "gatsby-plugin-mdx": "^3.13.0",
+    "gatsby-plugin-sass": "^5.13.0",
+    "gatsby-plugin-sharp": "^4.13.0",
+    "gatsby-source-filesystem": "^4.13.0",
+    "gatsby-transformer-sharp": "^4.13.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.50.1"
+    "sass": "^1.51.0",
+    "tsm": "^2.2.1",
+    "typed-scss-modules": "^3.4.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
